@@ -1,0 +1,278 @@
+/*
+---01 Typography System---
+-FONT SIZE SYSTEM (px)
+ 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-Font Weights:
+ Default: 400
+ Medium: 500
+ Semi-BOld: 600
+ Bold: 700
+
+-Line heights:
+ Default: 1
+ Small: 1.05
+ medium: 1.2
+ Paragraph Defult: 1.6
+
+ ---02 Colors
+ 
+ -Primary: #e67e22
+ -Tints:#fdf2e9
+ -Shades:#cf711f
+ -Accents:
+ -Grey:
+ #555
+ #333
+ 
+ ---05 Shadows
+ 
+ --- 06 Border Radius
+
+ Defult: 9px
+ 
+ --- 07 Whitespace
+ -SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ */
+
+
+
+/***************************/
+/*GENERAL SECTION*/
+/***************************/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth; */
+}
+
+body
+{
+    font-family: "Rubik",sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    overflow-x: hidden;
+    
+}
+
+.btn, .btn:visited
+{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    font-weight: 600;
+
+    cursor: pointer;
+    border: none;
+    /*Put transistion on original state*/
+    transition: all 0.5s;
+
+    font-family: inherit;
+}
+
+.btn--full, .btn--full:visited
+{
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.btn--full:hover, .btn--full:active
+{
+    background-color: #cf711f;
+}
+
+.btn--outline, .btn--outline:visited
+{
+    background-color: #fff;
+    color: #555;
+}
+
+.btn--outline:hover, .btn--outline:active
+{
+    background-color: #fdf2e9 ;
+    box-shadow: inset 0 0 0 3px #fff; 
+}
+
+.btn--form
+{
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem !important;
+}
+
+.btn--form:hover
+{
+    background-color: #fff;
+    color: #555;
+}
+
+.link, .link:visited
+{
+    display: inline-block;
+    color:#e67e22;
+    text-transform: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.3sec;
+}
+
+.link:hover, .link:active
+{
+    color: #cf711f;
+    /* border: 1px solid transparent;*/
+    border: hidden;
+} 
+
+.margin-right-sm
+{
+    margin-right: 1.6rem !important;
+}
+
+.primary-heading
+{
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary,.primary-heading
+{
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.heading-secondary
+{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+}
+
+.subheading
+{
+    display: block;
+    font-size: 1.6rem;
+    color: #cf711f;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.heading-tertiary
+{
+    font-size: 3.0rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item
+{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+.list-icon
+{
+    height: 3rem;
+    width: 3rem;
+    color: #e67e22;
+}
+
+*:focus
+{
+   outline: none;
+    box-shadow: 0 0 0.8rem rgba(230, 125, 34, 0.466);
+}
+
+/*******************************/
+/*GENERAL REUSABLE COMPONENTS*/
+/*******************************/
+
+.container
+{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.grid
+{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid:not(:last-child)
+{
+    margin-bottom: 9.6rem;
+}
+
+.grid--2--cols
+{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3--cols
+{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4--cols
+{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5--cols
+{
+    grid-template-columns: repeat(5,1fr);
+}
+
+.grid-center-v
+{
+    align-items: center;
+}
+
+.margin-bottom-md
+{
+    margin-bottom: 4.8rem !important;
+}
+
+strong
+{
+    font-weight: 500;
+}
+
+.center-text
+{
+    text-align: center;
+}
+
+
+
+
